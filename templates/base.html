@@ -21,16 +21,16 @@
                                 <div><a>Projects</a></div>
                                 <div><a>Teams</a></div>
                                 <div>
-                                    <a href="{% url 'logout' %}">Logout</a>
+                                    <a href="{% url 'account:logout' %}">Logout</a>
                                 </div>
                             </div>
                         </div>
                         {% else %}
                         <div class="login">
-                            <a href="{% url 'login' %}">Login</a>
+                            <a href="{% url 'account:login' %}">Login</a>
                         <div>
                         <div class="sign-in">
-                            <a href="{% url 'create-user' %}">Register</a>
+                            <a href="{% url 'account:create-user' %}">Register</a>
                         </div>
                         {% endif %}
                     </div>
