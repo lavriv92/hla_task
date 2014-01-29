@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <section class="account-container c-form">
+        <section class="panel form-panel">
+            <h2>Login</h2>
+            <form method="POST" role="form">
+                {% csrf_token %}
+                {% for field in form %}
+                <p>
+                  {{ field }}
+                  {% for err in field.errors %}
+                  <small class="error">{{ err|escape }}</small>
+                  {% endfor %}
+                <p>
+                {% endfor %}
+                <input type="submit" class="btn">
+            </form>
+        </section>
+    <section>
+{% endblock %}

@@ -1,0 +1,141 @@
+@import "account/account";
+
+@link_color: #6a92cc;
+
+
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+input {
+  line-height: 30px;
+  outline: none;
+  border: 1px solid #ddd;
+  width: 230px;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  &:focus {
+    border: 1px solid #3f71ba;
+    box-shadow: 0 0 5px #ccc;
+  }
+}
+
+select {
+  outline: none;
+}
+
+body {
+  background: #ffffff;
+}
+
+a {
+  color: @link_color;
+  text-decoration: none;
+}
+
+header {
+  display: block;
+  background-image: -webkit-linear-gradient(#f6f6f6, #cccccc);
+  border-bottom: 1px solid #788785;
+  height: 60px;
+  line-height: 60px;
+  margin-bottom: 20px;
+  
+  h1 {
+    float: left;
+    margin-left: 15px;
+  }
+
+  .sign {
+    float: right;
+    min-width: 100px;
+    max-width: 150px;
+
+    .u-name {
+      display: block;
+      width: 100px;
+      float: right;
+      margin-right: 10px;
+      vertical-align: middle;
+
+      img {
+        margin-left: 10px;
+      }
+
+      a {
+        margin-left: 10px;
+      }
+    }
+
+    .account {
+      float: right;
+
+      &:hover {
+        .head-dropdown {
+          display: block;
+        }
+
+        .u-name {
+          background: #dedbd3;
+        }
+      }
+    }
+
+    div {
+      display: inline-block;
+      margin-left: 10px;
+
+      .head-dropdown {
+        position: relative;
+        z-index: 500px;
+        display:  none;
+        width: 200px;
+        float: right;
+        background: #dedbd3;
+        margin-right: 10px;
+        div {
+          margin: 0 auto;
+          display: block;
+          font-size: 16px;
+          line-height: 40px;
+
+          a {
+            margin-left: 10px;
+          }
+
+          &:hover {
+            background: #bbb6a4;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+#main {
+  min-height: 500px;
+}
+
+footer {
+  display: block;
+  text-align: center;
+}
+
+.btn {
+  width: 50px;
+
+  &:hover {
+    background: blue;
+  }
+}
+
