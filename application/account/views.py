@@ -1,11 +1,12 @@
-from .models import User 
 from django.shortcuts import render, redirect
 from django.core.urlresolvers import reverse
 from django.views.generic.edit import FormView, CreateView
 from django.views.generic import TemplateView
-from .forms import LoginForm, CreateUserForm
 from django.contrib import auth
 from django.http import HttpResponseRedirect
+
+from .models import User
+from .forms import LoginForm, CreateUserForm
 
 
 class LoginView(FormView):
