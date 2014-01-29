@@ -1,4 +1,5 @@
 from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
 
 
 class LoginMiddleware(object):
@@ -8,10 +9,11 @@ class LoginMiddleware(object):
     
     def process_request(self, request):
         """
-        page request settings
+        Page request settings.
         """
-        if not request.user.is_authenticated():
-            pass
-            #return HttpResponseRedirect('/account/login')
+        url = reverse('account:login')
+        if (not request.user.is_authenticated() and
+            request.get_full_path() != url):
+                return HttpResponseRedirect(reverse('account:login'))
         return None
-    
+
