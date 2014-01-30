@@ -1,13 +1,16 @@
 @import "account/account";
 
-@link_color: #6a92cc;
+@link_color: #369;
+@default_color: #232323;
 
 
 * {
-  font-family: sans-serif;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
   margin: 0;
   padding: 0;
   font-weight: normal;
+  color: @default_color;
+  letter-spacing: -1px;
 }
 
 html {
@@ -34,7 +37,7 @@ select {
 }
 
 body {
-  background: #ffffff;
+  background: #eee;
 }
 
 a {
@@ -44,7 +47,7 @@ a {
 
 header {
   display: block;
-  background-image: -webkit-linear-gradient(#f6f6f6, #cccccc);
+  background: #43444E;
   border-bottom: 1px solid #788785;
   height: 60px;
   line-height: 60px;
@@ -53,6 +56,10 @@ header {
   h1 {
     float: left;
     margin-left: 15px;
+
+    a {
+      color: #fff;
+    }
   }
 
   .sign {
@@ -85,7 +92,7 @@ header {
         }
 
         .u-name {
-          background: #dedbd3;
+          background: #25262b;
         }
       }
     }
@@ -100,7 +107,7 @@ header {
         display:  none;
         width: 200px;
         float: right;
-        background: #dedbd3;
+        background: #25262b;
         margin-right: 10px;
         div {
           margin: 0 auto;
@@ -114,7 +121,7 @@ header {
           }
 
           &:hover {
-            background: #bbb6a4;
+            background: #202126;
             cursor: pointer;
           }
         }
