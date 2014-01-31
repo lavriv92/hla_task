@@ -10,7 +10,7 @@
         border: 1px solid #e5e4e6;
         border-radius: 8px;
         padding-top: 20px;
-        padding-bottom: 20px;
+        padding-bottom: 30px;
         
         h2 {
             color: @link_color;
@@ -21,6 +21,7 @@
     form {
 
         margin: 20px;
+        padding-bottom: 50px;
         p {
             margin-bottom: 10px;
             .error {
@@ -36,7 +37,17 @@
         }
 
         button {
-          float: right;
+          float: left;
+          color: #fff;
+          background: @link_color;
+          line-height: 40px;
+          width: 200px;
+          border: none;
+          border-radius: 5px;
+
+          &:hover {
+            background: #2b5682;
+          }
         }
     }
 }
