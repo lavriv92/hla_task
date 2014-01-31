@@ -30,7 +30,7 @@ class LoginForm(forms.Form):
         user = auth.authenticate(username=username, password=password)
 
         if not user:
-            raise forms.ValidationError('User is not authenticated')
+            raise forms.ValidationError(_('User is not authenticated'))
         auth.login(self.request, user)
         return cleaned_data
         

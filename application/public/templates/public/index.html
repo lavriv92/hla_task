@@ -2,12 +2,24 @@
 
 {% block main %}
 <div class="index-wrapper">
-    <h2>{{ user }}s Dashboard</h2>
     <div class="user-dasboard">
         <div class="left-panel"></div>
-        <div class="rigt-panel">
-            <div class="latest-tasks"></div>
-            <div class="actual-projects"></div>
+        <div class="right-panel">
+            <h2>{{ user }}s Dashboard</h2>
+            <div class="tab-links">
+                <div class="tab-nav">
+                    <span>Projects</span>
+                    <span>Tasks</span>
+                    <span>Team news</span>
+                </div>
+            </div>
+            <div class="tabs">
+                <script type="text/x-handlebars" data-template-name="index">
+                 
+                </script>
+                <div class="latest-tasks"></div>
+                <div class="actual-projects"></div>
+            </div>
         </div>
     </div>
 </div>
